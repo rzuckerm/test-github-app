@@ -35,7 +35,7 @@ jobs:
         with:
           commit-message: Update version
           committer: GitHub Actions <action@github.com>
-          branch: readme-generation
+          branch: update-version
           delete-branch: true
           title: '[Automated Workflow] Update version'
           token: ${{ steps.generate-token.outputs.token }}
@@ -46,3 +46,4 @@ jobs:
         with:
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: rebase
+          token: ${{ steps.generate-token.outputs.token }}
