@@ -42,7 +42,7 @@ def read_version() -> str:
 def update_version() -> int:
     old_version = int(read_version())
     new_version = old_version + 1
-    VERSION_PATH.write_text(str(new_version), encoding="utf-8")
+    VERSION_PATH.write_text(f"{new_version}\n", encoding="utf-8")
     print(f"Version number has been updated from {old_version} to {new_version}")
 
 
